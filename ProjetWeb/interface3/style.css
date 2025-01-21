@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(to right, #8b1f65, #e41b54);
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.logo {
+    height: 50px;
+    width: 160px;
+    filter: brightness(1.1) contrast(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2) contrast(1.2);
+}
+.nav-primary {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-secondary {
+    display: flex;
+    gap: 1.25rem;
+    margin-left: 2rem;
+}
+
+.nav-secondary a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.nav-secondary a:hover {
+    color: white;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.elevate {
+    color: white;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.nav-btn.primary {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+/* Booking Section */
+.booking-section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.booking-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.highlight {
+    color: #8b1f65;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.city-button {
+    padding: 1.25rem 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    text-align: center;
+    transition: border-color 0.2s;
+}
+
+.city-button:hover {
+    border-color: #8b1f65;
+}
+
+.city-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: #333;
+    font-size: 0.85rem;
+}
+
+.city-code {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+    background-color: #f5f5f5;
+    padding: 3rem 2rem;
+}
+
+.feature-card {
+    text-align: center;
+}
+
+.feature-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.feature-link {
+    color: #8b1f65;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.feature-link:hover {
+    text-decoration: underline;
+}
+
+/* Quick Links Section */
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.quick-link {
+    text-align: center;
+}
+
+.quick-link h4 {
+    color: #8b1f65;
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.quick-link-btn {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+
+.quick-link-btn:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .city-grid,
+    .quick-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .features {
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-secondary {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-right {
+        display: none;
+    }
+    
+    .city-grid,
+    .features,
+    .quick-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .booking-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-primary {
+        display: none;
+    }
+    
+    .city-grid,
+    .features,
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .booking-section h2 {
+        font-size: 1.5rem;
+    }
+}

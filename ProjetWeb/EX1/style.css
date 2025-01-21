@@ -1,0 +1,63 @@
+/* General Styles */
+h2 {
+    text-align: center;
+    text-decoration: underline double;
+    margin-bottom: 100px;
+}
+
+.btn-primary {
+    display:block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+/* Layout for Accueil Page */
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#header, #footer {
+    border: 2px solid rgb(181, 161, 161);
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    
+}
+
+
+#content {
+    overflow: hidden; 
+}
+
+#left-sidebar, #right-sidebar {
+    width: 20%;
+    float: left;
+    border: 2px solid rgb(255, 0, 0);
+    padding: 10px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    text-align: center;
+    padding-bottom: 7.5%;
+    padding-top: 7.5%;
+}
+
+#right-sidebar {
+    float: right; /* Ensures it's positioned on the right */
+}
+
+#main {
+    width: 60%; /* Leaves space for sidebars and avoids overflow */
+    float: left;
+    border: 2px solid rgb(66, 26, 229);
+    padding: 103px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    text-align: center;
+}
